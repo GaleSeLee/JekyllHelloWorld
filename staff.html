@@ -1,0 +1,17 @@
+---
+layout: default
+title: Staff
+---
+<h1>Staff</h1>
+
+<ul>
+  {% for author in site.authors %}
+    <li>
+      <!-- author.url自动指向_authors/huangshuo.md -->
+      <h2><a href="{{ author.url }}">{{ author.short_name }}</a></h2>
+      <h3>{{ author.name }}</h3>
+      <p>{{ author.content | markdownify }}</p>
+    </li>
+  {% endfor %}
+</ul>
+
